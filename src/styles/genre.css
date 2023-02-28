@@ -1,0 +1,125 @@
+:root {
+    --purple-light-1: #FBFAFB;
+    --purple-light-2: #EEEAF2;
+    --purple-medium-1: #AA83C8;
+    --purple-medium-2: #8B48BF;
+    --purple-medium-3: #5C218A;
+    --purple-dark-1: #3E0F64;
+    --purple-dark-2: #2A0646;
+
+    --yellow: #EECC75;
+    --green: #CAD297;
+    --aqua: #B7EAC5;
+    --lightBlue: #A2EEE5;
+    --darkBlue: #8EA2EA;
+    --red: #F09D9D;
+}
+
+.containerGenre {
+    background-color: rgb(33,37,41);
+}
+
+.titleGenre {
+    text-align: center;
+    color: white;
+}
+
+.list-genres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.genre {
+    margin: 10px;
+    padding: 5px 10px;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.genre:hover {
+    background-color: gray;
+}
+
+/*Colors Genres*/
+.genre-28 {
+    background-color: var(--aqua);
+}
+
+.genre-12 {
+    background-color: var(--purple-light-2);
+}
+
+.genre-16 {
+    background-color: var(--purple-medium-1);
+}
+
+.genre-35 {
+    background-color: var(--purple-medium-2);
+}
+
+.genre-80 {
+    background-color: var(--darkBlue);
+}
+
+.genre-99 {
+    background-color: var(--aqua);
+}
+
+.genre-18 {
+    background-color: var(--purple-light-2);
+}
+
+.genre-10751 {
+    background-color: var(--darkBlue);
+}
+
+.genre-14 {
+    background-color: var(--purple-medium-1);
+}
+
+.genre-36 {
+    background-color: var(--red);
+}
+
+.genre-27 {
+    background-color: var(--darkBlue);
+}
+
+.genre-10402 {
+    background-color: var(--green);
+}
+
+.genre-9648 {
+    background-color: var(--lightBlue);
+}
+
+.genre-10749 {
+    background-color: var(--darkBlue);
+}
+
+.genre-878 {
+    background-color: var(--purple-medium-2);
+}
+
+.genre-10770 {
+    background-color: var(--aqua);
+}
+
+.genre-53 {
+    background-color: var(--purple-medium-1);
+}
+
+.genre-10752 {
+    background-color: var(--green);
+}
+
+.genre-37 {
+    background-color: var(--red);
+}
+
+/* .icon-gen {
+    color: white;
+} */
