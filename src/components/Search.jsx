@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useMovieSearchContext } from '../contexts/SearchProvider'
 import Cartel from './Cartel';
 import Information from './Information';
+import '../styles/search.css';
 
 const Search = () => {
 
@@ -26,17 +27,17 @@ const Search = () => {
         {movies?.map((movie) => {
           return (
             <>
-              <div className='movie' key={movie.id}>
+              {/* <div className='movie' key={movie.id}> */}
                 <img
                   className='poster'
                   src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
                   alt="poster"
                   onClick={() => handleInfo(movie.id)}
                 />
-                <p className='title'>
+                {/* <p className='title'>
                   {movie.title}
-                </p>
-              </div>
+                </p> */}
+              {/* </div> */}
             </>
           )
         })}

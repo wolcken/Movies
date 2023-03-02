@@ -31,17 +31,17 @@ const Trending = () => {
         {trendings?.map((treding) => {
           return (
             <>
-              <div className='movie' key={treding.id}>
+              {/* <div className='movie' key={treding.id}> */}
                 <img
                   className='poster'
                   src={`https://image.tmdb.org/t/p/w300${treding.poster_path}`}
                   alt="poster"
                   onClick={() => handleInfo(treding.id)}
                 />
-                <p className='title'>
+                {/* <p className='title'>
                   {treding.title}
-                </p>
-              </div>
+                </p> */}
+              {/* </div> */}
             </>
           )
         })}

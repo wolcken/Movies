@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import apiObjects from '../api/axios';
 import { useMovieHandleContext } from '../contexts/SearchProvider';
@@ -55,7 +55,7 @@ const NavCustom = () => {
                   <Nav.Link href='/' >Home</Nav.Link>
                   <Nav.Link href='/movies' >Movies</Nav.Link>
                   <Nav.Link href='/series' >Series</Nav.Link>
-                  <NavDropdown
+                  {/* <NavDropdown
 
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
@@ -68,7 +68,7 @@ const NavCustom = () => {
                     <NavDropdown.Item href="#action5">
                       Something else here
                     </NavDropdown.Item>
-                  </NavDropdown>
+                  </NavDropdown> */}
                 </Nav>
                 <Form className="d-flex">
                   <Form.Control

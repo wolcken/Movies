@@ -1,0 +1,33 @@
+.movies {
+    display: flex;
+}
+
+.movies {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+/* .poster {
+    height: 300px;
+    cursor: pointer;
+    border-radius: 15px;
+} */
+
+.title {
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+}
+
+@media (max-width: 450px) {
+    .poster {
+        height: 300px;
+    }
+}

@@ -11,7 +11,7 @@ const Information = (props) => {
     // console.log(details);
 
     return (
-        <div>
+        <div className='Information'>
             {/* <h2 className='titleInfo'>{details?.title}</h2> */}
             <div className="detailsInfo">
                 <section className="left">
