@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useMovieSearchContext } from '../contexts/SearchProvider'
 import Cartel from './Cartel';
-import Information from './Information';
+import Movie from './Movie';
 import '../styles/search.css';
 
 const Search = () => {
@@ -22,7 +22,7 @@ const Search = () => {
   return (
     <div>
       {showCartel && (<Cartel />)}
-      {showInfo && (<Information id={info} />)}
+      {showInfo && (<Movie id={info} />)}
       <div className="movies">
         {movies?.map((movie) => {
           return (

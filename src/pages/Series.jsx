@@ -3,10 +3,7 @@ import Tv from '../components/Tv'
 
 const Series = () => {
   return (
-    <>
-      Series
       <Tv />
-    </>
   )
 }
 

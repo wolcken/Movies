@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/treding.css';
 import apiObjects from '../api/axios';
-import Information from './Information';
+import Movie from './Movie';
 import Cartel from './Cartel';
 
 const apiTrending = 'trending/movie/day';
@@ -25,7 +25,7 @@ const Trending = () => {
   return (
     <div className='containerTreding'>
       {showCartel && (<Cartel />)}
-      {showInfo && (<Information id={info} />)}
+      {showInfo && (<Movie id={info} />)}
       <h2 className='tredingTitle'>Treding</h2>
       <div className="movies">
         {trendings?.map((treding) => {

@@ -73,7 +73,7 @@ const NavCustom = () => {
                 <Form className="d-flex">
                   <Form.Control
                     type="search"
-                    placeholder="Search"
+                    placeholder="Search Movie"
                     className="me-2"
                     aria-label="Search"
                     value={text}

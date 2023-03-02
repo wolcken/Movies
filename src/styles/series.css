@@ -1,9 +1,12 @@
-.series {
-    display: flex;
+.containerSeries {
+    text-align: center;
+    background-color: rgb(33,37,41);
+    color: white;
+    /* display: flex; */
 }
 
-.series {
+/* .series {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-}
+} */

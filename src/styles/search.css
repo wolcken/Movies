@@ -14,11 +14,11 @@
     padding: 5px;
 }
 
-/* .poster {
-    height: 300px;
+.poster {
+    height: 350px;
     cursor: pointer;
-    border-radius: 15px;
-} */
+    /* border-radius: 15px; */
+}
 
 .title {
     text-align: center;

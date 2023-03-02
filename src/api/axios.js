@@ -82,16 +82,20 @@ const useDetails = (apiDetails) => {
     return detail;
 }
 
-const useSeries = (apiSeries) => {
-    const [serie, setSerie] = useState([apiSeries]);
+const useSeries = (apiSeries, numPage) => {
+    const [serie, setSerie] = useState([apiSeries, numPage]);
 
     useEffect(() => {
         const getSeries = async () => {
-            const response = await api(apiSeries);
+            const response = await api(apiSeries, {
+                params: {
+                    page: numPage
+                }
+            });
             setSerie(response);
         }
         getSeries();
-    }, [apiSeries]);
+    }, [apiSeries, numPage]);
     return serie;
 }
 

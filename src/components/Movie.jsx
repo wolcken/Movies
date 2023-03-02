@@ -1,8 +1,8 @@
 import React from 'react'
 import apiObjects from '../api/axios';
-import '../styles/information.css';
+import '../styles/movie.css';
 
-const Information = (props) => {
+const Movie = (props) => {
 
     const idMovie = props.id;
     const apiDetail = `/movie/${idMovie}`;
@@ -40,4 +40,4 @@ const Information = (props) => {
     )
 }
 
-export default Information
+export default Movie
