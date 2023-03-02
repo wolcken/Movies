@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import '../styles/nav.css'
+import '../styles/nav.css'
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
