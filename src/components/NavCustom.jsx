@@ -9,7 +9,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import apiObjects from '../api/axios';
 import { useMovieHandleContext } from '../contexts/SearchProvider';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const apiSearch = '/search/movie';
 
@@ -49,12 +49,12 @@ const NavCustom = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  {/* <NavLink className='nave' to={'/'}>Home</NavLink>
+                  <NavLink className='nave' to={'/'}>Home</NavLink>
                   <NavLink className='nave' to={'/movies'}>Movies</NavLink>
-                  <NavLink className='nave' to={'/series'}>Series</NavLink> */}
-                  <Nav.Link href='/' >Home</Nav.Link>
+                  <NavLink className='nave' to={'/series'}>Series</NavLink>
+                  {/* <Nav.Link href='/' >Home</Nav.Link>
                   <Nav.Link href='/movies' >Movies</Nav.Link>
-                  <Nav.Link href='/series' >Series</Nav.Link>
+                  <Nav.Link href='/series' >Series</Nav.Link> */}
                   {/* <NavDropdown
 
                     title="Dropdown"
