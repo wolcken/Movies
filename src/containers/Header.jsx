@@ -1,5 +1,5 @@
-import React from 'react'
-import NavCustom from '../components/NavCustom'
+import React from 'react';
+import NavCustom from '../components/NavCustom';
 
 const Header = () => {
     return (

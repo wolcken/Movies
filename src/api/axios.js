@@ -39,16 +39,20 @@ const useTrending = (apiTrending) => {
     return trending;
 }
 
-const useDiscover = (apiDiscover) => {
-    const [discover, setDiscover] = useState([apiDiscover]);
+const useDiscover = (apiDiscover, id) => {
+    const [discover, setDiscover] = useState([apiDiscover, id]);
 
     useEffect(() => {
         const getDiscover = async () => {
-            const response = await api(apiDiscover);
+            const response = await api(apiDiscover, {
+                params: {
+                    with_genres: id,
+                }
+            });
             setDiscover(response);
         }
         getDiscover();
-    }, [apiDiscover])
+    }, [apiDiscover, id])
     return discover;
 }
 
@@ -91,13 +95,31 @@ const useSeries = (apiSeries) => {
     return serie;
 }
 
+const useSearch = (apiSearch, query) => {
+    const [search, setSearch] = useState([apiSearch, query]);
+
+    useEffect(() => {
+        const getSearch =async () => {
+            const response = await api(apiSearch, {
+                params: {
+                    query: query,
+                }
+            });
+            setSearch(response);
+        }
+        getSearch();
+    }, [apiSearch, query]);
+    return search;
+}
+
 const apiObjects = {
     useGenre,
     useTrending,
     useDiscover,
     useMovie,
     useDetails,
-    useSeries
+    useSeries,
+    useSearch
 }
 
 export default apiObjects;

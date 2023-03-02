@@ -6,21 +6,27 @@ import Home from '../pages/Home';
 import Movies from '../pages/Movies';
 import Series from '../pages/Series';
 import NotFound from '../pages/NotFound';
+import ByGenre from '../pages/ByGenre';
+import { SearchProvider } from '../contexts/SearchProvider';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Layout>
-        <Routes>
 
-          <Route path='/' element={<Home />} />
-          <Route path='/movies' element={<Movies />} />
-          <Route path='/series' element={<Series />} />
-          <Route path='*' element={<NotFound />} />
-          
-        </Routes>
-      </Layout>
-    </BrowserRouter>
+  return (
+    <SearchProvider>
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+
+            <Route path='/' element={<Home />} />
+            <Route path='/movies' element={<Movies />} />
+            <Route path='/series' element={<Series />} />
+            <Route path='/byGenre' element={<ByGenre />} />
+            <Route path='*' element={<NotFound />} />
+
+          </Routes>
+        </Layout>
+      </BrowserRouter>
+    </SearchProvider>
   );
 }
 

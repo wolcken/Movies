@@ -1,0 +1,27 @@
+.titleInfo {
+    text-align: center;
+    color: gray;
+}
+
+.detailsInfo {
+    display: flex;
+    padding: 10px;
+    color: gray;
+}
+
+
+/*left*/
+.leftDetails {
+    display: flex;
+    justify-content: space-between;
+}
+
+.posterInfo {
+    border-radius: 15px;
+}
+
+/*rigth*/
+
+.rigth{
+    padding-left: 10px;
+}

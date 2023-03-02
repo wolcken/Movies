@@ -1,0 +1,13 @@
+.containerDiscover {
+    color: gray;
+    text-align: center;
+    background-color: rgb(33,37,41);
+}
+
+.SubTitleGenre {
+    color: white;
+}
+
+.poster:hover {
+    opacity: 0.5;
+}

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/treding.css';
 import apiObjects from '../api/axios';
-import Details from './Details';
+import Information from './Information';
+import Cartel from './Cartel';
 
 const apiTrending = 'trending/movie/day';
 
@@ -11,11 +12,20 @@ const Trending = () => {
   const trendings = response.data?.results;
   // console.log(trendings);
 
-  const [show, setShow] = useState(false);
-  const handleShow = () => setShow(!show);
+  const [showCartel, setShowCartel] = useState(true)
+  const [showInfo, setShowInfo] = useState(false);
+
+  const [info, setInfo] = useState(null);
+  const handleInfo = (inf) => {
+    setInfo(inf)
+    setShowInfo(true)
+    setShowCartel(false)
+  }
 
   return (
     <div className='containerTreding'>
+      {showCartel && (<Cartel />)}
+      {showInfo && (<Information id={info} />)}
       <h2 className='tredingTitle'>Treding</h2>
       <div className="movies">
         {trendings?.map((treding) => {
@@ -26,15 +36,12 @@ const Trending = () => {
                   className='poster'
                   src={`https://image.tmdb.org/t/p/w300${treding.poster_path}`}
                   alt="poster"
-                  onClick={handleShow}
+                  onClick={() => handleInfo(treding.id)}
                 />
                 <p className='title'>
                   {treding.title}
                 </p>
               </div>
-              {show && (
-                <Details id={treding.id} />
-              )}
             </>
           )
         })}

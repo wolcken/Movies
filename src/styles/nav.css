@@ -1,0 +1,14 @@
+.pe-3 {
+    display: flex;
+    align-items: center;
+}
+
+.nave {
+    color: rgb(165, 165, 165);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.nave:hover {
+    color: rgb(205, 205, 205);
+}

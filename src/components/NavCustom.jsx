@@ -1,5 +1,5 @@
-import React from 'react';
-import '../styles/nav.css'
+import React, { useState } from 'react';
+// import '../styles/nav.css'
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -7,12 +7,31 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import apiObjects from '../api/axios';
+import { useMovieHandleContext } from '../contexts/SearchProvider';
+import { useNavigate } from 'react-router-dom';
+
+const apiSearch = '/search/movie';
 
 const NavCustom = () => {
+
+  const [text, setText] = useState('');
+  const handleText = ({target}) => {
+    setText(target.value)
+  }
+
+  const response = apiObjects.useSearch(apiSearch, text)
+
+  const aux = response.data?.results
+
+  const handleSearch = useMovieHandleContext();
+
+  const navigate = useNavigate();
+
   return (
     <>
       {['sm'].map((expand) => (
-        <Navbar key={expand} bg="dark" variant='dark' expand={expand} className="mb-3">
+        <Navbar key={expand} bg="dark" variant='dark' expand={expand} className="mb-0">
           <Container fluid>
             <Navbar.Brand href="/">
               <i className="fa-solid fa-film"></i> Wolcken Movies
@@ -30,11 +49,14 @@ const NavCustom = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href='/'>Home</Nav.Link>
-                  <Nav.Link href='/movies'>Movies</Nav.Link>
-                  <Nav.Link href='/series'>Series</Nav.Link>
+                  {/* <NavLink className='nave' to={'/'}>Home</NavLink>
+                  <NavLink className='nave' to={'/movies'}>Movies</NavLink>
+                  <NavLink className='nave' to={'/series'}>Series</NavLink> */}
+                  <Nav.Link href='/' >Home</Nav.Link>
+                  <Nav.Link href='/movies' >Movies</Nav.Link>
+                  <Nav.Link href='/series' >Series</Nav.Link>
                   <NavDropdown
-                    
+
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
@@ -54,8 +76,18 @@ const NavCustom = () => {
                     placeholder="Search"
                     className="me-2"
                     aria-label="Search"
+                    value={text}
+                    onChange={handleText}
                   />
-                  <Button variant="outline-secondary">Search</Button>
+                  <Button
+                    variant="outline-secondary"
+                    onClick={() => {
+                      navigate('/')
+                      handleSearch(aux)
+                    }}
+                  >
+                    Search
+                  </Button>
                 </Form>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
